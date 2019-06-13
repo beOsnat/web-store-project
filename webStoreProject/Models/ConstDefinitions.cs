@@ -10,5 +10,6 @@ namespace webStoreProject.Models
         public const double MembersDiscount = 0.9;
 
         public int Exm { get; set; }
+        public int MyProperty { get; set; }
     }
 }
