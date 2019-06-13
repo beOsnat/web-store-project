@@ -8,5 +8,7 @@ namespace webStoreProject.Models
     public class ConstDefinitions
     {
         public const double MembersDiscount = 0.9;
+
+        public int Exm { get; set; }
     }
 }
