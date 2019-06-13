@@ -11,13 +11,14 @@ namespace webStoreProject.Models
     public class User
     {
         [HiddenInput]
+        [Required]
         public int UserId { get; set; }
         [Required (ErrorMessage ="Please enter firstame")]
         public string FirstName { get; set; }
         [Required(ErrorMessage ="Please enter lastname")]
         public string LastName { get; set; }
         [Required]
-   
+        
         public DateTime BirthDate { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
