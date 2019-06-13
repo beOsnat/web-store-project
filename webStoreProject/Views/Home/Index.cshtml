@@ -1,0 +1,53 @@
+﻿
+
+@model IEnumerable<webStoreProject.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+
+    @section Login {
+        <form>
+            <div>
+                User Name:<input type="text" />
+            </div>
+            <div>
+                Password: <input type="password" />
+            </div>
+            <div>
+                <input type="submit" value="Login" />
+            </div>
+
+        </form>
+    }
+</p>
+<div class="pageContent">
+    <div class="buttons">
+        <a asp-controller="Home" asp-action="OrderByDate">order by date</a>
+        <a asp-controller="Home" asp-action="OrderByTitle">order by Title</a>
+    </div>
+    <div class="ErrorMessages">
+
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div>
+                your messages here:
+            </div>
+            @ViewBag.ErrorMessage
+        }
+    </div>
+
+    <div class="advContent">
+        @foreach (var item in Model)
+        {
+            <div>
+                @await Html.PartialAsync("_AdvertisePartialView", item)
+            </div>
+        }
+    </div>
+
+</div>
+
+
+
