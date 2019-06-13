@@ -13,7 +13,6 @@ namespace webStoreProject.Controllers
     public class HomeController : Controller
     {
         private ICookiesService _cookieService;
-
         private IProductRepository _productRepository;
 
         public HomeController(IProductRepository productRepository, ICookiesService cookiesService)
