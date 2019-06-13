@@ -32,11 +32,5 @@ namespace webStoreProject.Models
         [Display(Name = "Re-type Password")]
         [Compare(nameof(Password), ErrorMessage ="Please Type Again")]
         public string PasswordConfirm { get; set; }
-
-
     }
-
-
-
-
 }
